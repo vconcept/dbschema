@@ -2,7 +2,7 @@
 
 This README documents the normalized database schema, SQL table creation, sample data inserts, and example queries for a University Information System.
 
-## Step 1 — Schema Design (Normalized up to 3NF)
+## Step 1 - Schema Design (Normalized up to 3NF)
 
 We model a University Information System with four main entities.
 
@@ -49,21 +49,21 @@ Represents the many-to-many relationship between Students and Courses.
 ### 2️ Normalization (Up to 3NF)
 
 -  First Normal Form (1NF)
-  - Atomic values ✔
-  - No repeating groups ✔
+  - Atomic values 
+  - No repeating groups 
 -  Second Normal Form (2NF)
   - Enrollment table uses composite key `(student_id, course_id)`
-  - Non-key attribute `grade` depends on full key ✔
+  - Non-key attribute `grade` depends on full key 
 -  Third Normal Form (3NF)
-  - No transitive dependencies ✔
-  - Instructor details stored separately from Courses ✔
+  - No transitive dependencies 
+  - Instructor details stored separately from Courses 
 
 ### Relationships
 
 - One Instructor → Many Courses
 - Many Students ↔ Many Courses (via Enrollments)
 
-## Step 2 — SQL Table Creation
+## Step 2 - SQL Table Creation
 
 ```sql
 -- STUDENTS TABLE
@@ -107,7 +107,7 @@ CREATE TABLE Enrollments (
 );
 ```
 
-## Step 3 — Insert Sample Data
+## Step 3 - Insert Sample Data
 
 ### Insert Students
 
@@ -146,7 +146,7 @@ INSERT INTO Enrollments VALUES
 (3, 202, 'A');
 ```
 
-## Step 4 — Query Execution
+## Step 4 - Query Execution
 
 ### 1. Retrieve all students enrolled in "Database Systems"
 
